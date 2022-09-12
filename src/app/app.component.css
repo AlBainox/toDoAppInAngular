@@ -1,0 +1,113 @@
+body {
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+}
+
+#container {
+  background-color: rgb(66, 55, 40);
+  height: 100%;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.head {
+  height: auto;
+  width: 70%;
+  margin-top: 50px;
+  margin-left: 15%;
+  background-color: rgba(243, 154, 122, 0.575);
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(233, 222, 215);
+  float: left;
+}
+.content
+{
+  height: 90%;
+}
+
+.writing {
+  height: 30px;
+  width: 45%;
+  background-color: rgb(233, 222, 215);
+  margin-top: 50px;
+  margin-left: 15%;
+  float: left;
+}
+
+.writingDate {
+  height: 30px;
+  width: 23%;
+  background-color: rgb(233, 222, 215);
+  margin-top: 50px;
+
+  float: left;
+}
+
+.btn {
+  height: auto;
+  width: 70%;
+  margin-top: 20px;
+  margin-left: 15%;
+  background-color: rgba(243, 154, 122, 0.575);
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(233, 222, 215);
+  font-size: large;
+  clear: both;
+}
+
+.tasks {
+
+  margin-top: 50px;
+  margin-left: 11%;
+  margin-right: 15%;
+  list-style-type: none;
+}
+.emptyList{
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(233, 222, 215);
+  text-align: center;
+}
+.toDoTask {
+  margin-top: 10px;
+  padding: 10px;
+  color: rgb(233, 222, 215);
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid #4ee9e9;
+}
+.doneTask
+{
+  margin-top: 10px;
+  padding: 10px;
+  text-decoration: line-through;
+  color: rgb(161, 156, 156);
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid #4ee9e9;
+}
+.delete
+{
+  background-color: rgba(233, 94, 94, 0.644);   
+  float: right;
+}
+.done
+{
+  background-color: rgba(94, 233, 147, 0.644); 
+  margin-right: 5px; 
+  float: right;
+}
+
+.footer
+{ 
+  padding-top: 3%;
+  padding-bottom: 3%;  
+  width: 70%; 
+  margin-left: 15%;
+  background-color: rgba(243, 154, 122, 0.575);
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(233, 222, 215);
+}
