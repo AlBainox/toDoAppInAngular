@@ -32,12 +32,7 @@ export class AppComponent {
   markTaskAsDone(task: Task) {
     task.done = true;
   }
-  stringNotNull() {
-    if (this.taskName != '' && this.deadline != '')
-      return false;
-    else
-      return true;
-  }
+  
   removeTask(task: Task)
   {
     this.tasks = this.tasks.filter(x=> x !== task);
