@@ -1,0 +1,25 @@
+<ul class="tasks" *ngIf="tasks.length > 0; else noTasks">
+    <ng-container *ngFor="let task of tasks; let i = index;" [ngSwitch]="task.done">
+      <li class="toDoTask" *ngSwitchCase="false">
+        <span>
+          {{i+1}}. {{task.name}} - {{ task.deadline }}
+        </span>
+
+        <button class="delete" (click)="removeTask.emit(task)">
+          Usuń
+        </button>
+        <button class="done" (click)="markTaskAsDone.emit(task)">
+          Wykonane
+        </button>
+      </li>
+      <li class="doneTask" *ngSwitchCase="true">
+        <span> {{task.name}}</span>
+      </li>
+    </ng-container>
+    <button class="btn" (click)="clearTask.emit()">
+      Wyczyść listę
+    </button>
+  </ul>
+  <ng-template #noTasks>
+    <h1 class="emptyList"> Brak zadań </h1>
+  </ng-template>

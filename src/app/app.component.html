@@ -9,34 +9,11 @@
     <div class="content">
       <input type="text" placeholder="Wpisz zadanie do wykonania" class="writing" [(ngModel)]="taskName">
       <input type="date" placeholder="Wpisz zadanie do wykonania" class="writingDate" [(ngModel)]="deadline">
-      <button class="btn" [disabled]="stringNotNull()" (click)="createTask()">
-        Dodaj zadanie
-      </button>
-      <ul class="tasks" *ngIf="tasks.length > 0; else noTasks">
-        <ng-container *ngFor="let task of tasks; let i = index;" [ngSwitch]="task.done">
-          <li class="toDoTask" *ngSwitchCase="false">
-            <span>
-              {{i+1}}. {{task.name}} - {{ task.deadline }}
-            </span>
+      <app-create-task-button (createTask)="createTask()" [taskName]="taskName" [deadline]="deadline"></app-create-task-button>
+     
+      <app-task-list [tasks]="tasks" (removeTask)="removeTask($event)" (markTaskAsDone)="markTaskAsDone($event)" (clearTask)="clearTask()">
 
-            <button class="delete" (click)="removeTask(task)">
-              Usuń
-            </button>
-            <button class="done" (click)="markTaskAsDone(task)">
-              Wykonane
-            </button>
-          </li>
-          <li class="doneTask" *ngSwitchCase="true">
-            <span> {{task.name}}</span>
-          </li>
-        </ng-container>
-        <button class="btn" (click)="clearTask()">
-          Wyczyść listę
-        </button>
-      </ul>
-      <ng-template #noTasks>
-        <h1 class="emptyList"> Brak zadań </h1>
-      </ng-template>
+      </app-task-list>
     </div>
     <div class="footer">
       2022© Aplikacja ToDoList napisana w Angularze
